@@ -145,13 +145,32 @@ img {
     background: #B07DFB;
 }
 
+@keyframes seta {
+    from {
+        right: 30px;
+    } to {
+        right: 20px;
+    }
+}
+
 
 @media (max-width: 760px) {
     .sidenav {
+        position: relative;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: -ms-autohiding-scrollbar;
     }
+
+    .sidenav::after {
+        content: '→';
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        color: rgba(0, 0, 0, .3);
+        animation: seta .5s ease-in 0s infinite alternate;
+    }
+
     .sidenav ul {
         display: flex;
     }

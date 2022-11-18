@@ -12,6 +12,7 @@ a {
 body {
     font-family: "Nunito", Arial, Helvetica, sans-serif;
     color: #222222;
+    -webkit-font-smoothing: antialiased;
 }
 
 ul {
@@ -204,7 +205,23 @@ img {
     padding: 20px;
     margin: 10px;
     min-width: 260px;
+    height: 300px;
+    overflow-y: scroll;
 }
+
+.singles-item::-webkit-scrollbar {
+    width: 8px;
+}
+.singles-item::-webkit-scrollbar-thumb {
+    background: #2c70ff;
+    border-left: 2px solid #2c70ff;
+    border-right: 2px solid #2c70ff;
+}
+
+.singles-item::-webkit-scrollbar-track {
+    background: #f7f7f7;
+}
+
 
 .singles-item h2 {
     font-size: 3em;

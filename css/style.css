@@ -209,6 +209,10 @@ img {
     overflow-y: scroll;
 }
 
+.singles-item h2 {
+    cursor: pointer;
+}
+
 .singles-item::-webkit-scrollbar {
     width: 8px;
 }
@@ -410,4 +414,27 @@ img {
     text-align: center;
     font-size: 2.25em;
     color: #122ab2;
+}
+
+
+.js .js-tabcontent ul{
+    display: none;
+}
+
+.js-tabcontent ul.ativo{
+    display: block; !important;
+    animation: show .5s forwards;
+
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }    
+
 }
